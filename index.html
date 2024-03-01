@@ -12,7 +12,7 @@
     <header>
       <div class="header__bar">
         <img src="src/assets/logo.svg" alt="logo-da-empresa" />
-        <button class="header__btn">Entrar para próxima turma</button>
+        <button class="header__btn showModal">Entrar para próxima turma</button>
       </div>
     </header>
     <main>
@@ -53,7 +53,7 @@
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s
               </p>
-              <button class="faq__left-btn">Entrar para próxima turma</button>
+              <button class="faq__left-btn showModal">Entrar para próxima turma</button>
             </div>
           </div>
           <!-- RIGHT SIDE -->
@@ -191,7 +191,21 @@
     </footer>
 
     <!-- ====== Modal ====== -->
-    <dialog></dialog>
-    <script src="src/scripts/script.js"></script>
+    <dialog id="modalController">
+      <div id="modalContainer">
+        <div id="modalHeader">
+          <h3 id="modalTitle">Cadastro</h3>
+          <button id="modalCloseBtn">X</button>
+        </div>
+        <p id="modalText">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+        </p>
+        <input id="modalInput" type="email" placeholder="Digite seu email"
+        required="">
+        <button id="modalBtn">Entrar para a próxima turma</button>
+      </div>
+    </dialog>
+    <script src="./src/scripts/script.js"></script>
   </body>
 </html>

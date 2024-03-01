@@ -11,6 +11,8 @@
     --color-gray-dark: #191C1F;
     --color-text: #ADB5BD;
     --color-titles-btn: #F8F9FA;
+    --color-modal: #212529;
+    --color-modal-close: #343A40;
 }
 
 body{
@@ -204,7 +206,6 @@ font-weight: 600;
     justify-content: space-evenly;
     width: 100%;
     gap: 56px;
-    border: 1px solid red;
 }
 
 .comments__left{
@@ -290,4 +291,85 @@ font-weight: 600;
     background-color: var(--color-gray-dark);
     gap: 10px;
     padding: 30px 600px;
+}
+
+.showModal{
+    cursor: pointer;
+}
+
+#modalController{
+    width: 500px;
+    background: none;
+    border: none;
+}
+#modalContainer{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 28px;
+    gap: 30px;
+
+    background-color: var(--color-modal);
+    border: 2px solid var(--color-blue);
+    color: var(--color-text);
+}
+
+#modalHeader{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#modalTitle{
+    font-size: var(--font-title-3);
+    color: var(--color-titles-btn);
+    font-weight: 600;
+}
+
+#modalCloseBtn{
+    color: var(--color-titles-btn);
+    background-color: var(--color-modal-close);
+    border: none;
+    border-radius: 4px;
+    padding: 5px 5px;
+    gap: 10px;
+}
+
+#modalText{
+    width: 100%;
+    text-align: justify;
+    line-height: 24px;
+}
+
+#modalInput{
+    width: 95%;
+    height: 40px;
+    padding: 10px 10px;
+
+    background-color: var(--color-gray-dark);
+    border: 1px solid var(--color-gray-dark);
+    color: var(--color-text);
+    font-size: var(--font-title-3);
+}
+
+#modalBtn{
+    width: 100%;
+    height: 55px;
+    padding: 0px 32px;
+    line-height: 24px;
+    font-size: var(--font);
+    box-sizing: border-box;
+
+    color: var(--color-titles-btn);
+    font-weight: 600;
+    background-color: var(--color-blue);
+    border: none;
+}
+
+dialog::backdrop{
+    background-color: var(--color-modal);
+    opacity: 0.8;
 }
